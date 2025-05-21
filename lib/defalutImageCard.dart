@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 class ImageCard extends StatelessWidget {
-  final String assetPath;
+  final String imagePath;
+  final String title;
 
-  const ImageCard({super.key, required this.assetPath});
+  const ImageCard({super.key, required this.imagePath,required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class ImageCard extends StatelessWidget {
             borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
 
-              assetPath,
+              imagePath,
               height: 80,
               fit: BoxFit.cover,
               width: double.infinity,
@@ -42,7 +43,7 @@ class ImageCard extends StatelessWidget {
           ],),
           SizedBox(height: 3,),
           Text(
-            "Full Stack Web Development(Mern)",
+           title,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
